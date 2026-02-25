@@ -1,0 +1,30 @@
+[
+  {
+    "slug": "brand-renewal-2025",
+    "title": "2025 브랜드 리뉴얼 제안서",
+    "summary": "브랜드 아이덴티티 재정립 및 디자인 시스템 구축 프로젝트",
+    "thumb": {
+      "src": "/proposals/brand-renewal-2025/thumb.jpg",
+      "alt": "2025 브랜드 리뉴얼 제안서 썸네일"
+    },
+    "pages": [
+      { "src": "/proposals/brand-renewal-2025/p-001.jpg", "alt": "브랜드 리뉴얼 제안서 1페이지 - 표지" },
+      { "src": "/proposals/brand-renewal-2025/p-002.jpg", "alt": "브랜드 리뉴얼 제안서 2페이지 - 목차" },
+      { "src": "/proposals/brand-renewal-2025/p-003.jpg", "alt": "브랜드 리뉴얼 제안서 3페이지 - 현황 분석" }
+    ]
+  },
+  {
+    "slug": "app-redesign",
+    "title": "모바일 앱 리디자인 제안서",
+    "summary": "사용자 경험 개선을 위한 모바일 앱 UI/UX 리디자인",
+    "thumb": {
+      "src": "/proposals/app-redesign/thumb.jpg",
+      "alt": "모바일 앱 리디자인 제안서 썸네일"
+    },
+    "pages": [
+      { "src": "/proposals/app-redesign/p-001.jpg", "alt": "앱 리디자인 제안서 1페이지 - 표지" },
+      { "src": "/proposals/app-redesign/p-002.jpg", "alt": "앱 리디자인 제안서 2페이지 - 현황 분석" },
+      { "src": "/proposals/app-redesign/p-003.jpg", "alt": "앱 리디자인 제안서 3페이지 - 개선 방향" }
+    ]
+  }
+]

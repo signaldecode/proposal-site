@@ -1,0 +1,16 @@
+@use '../../assets/styles/tokens/spacing' as *;
+@use '../../assets/styles/tokens/colors' as *;
+@use '../../assets/styles/tokens/typography' as *;
+
+.viewer {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-0;
+  max-width: 960px;
+  margin: $spacing-0 auto;
+}
+
+.page {
+  width: 100%;
+  height: auto;
+}

@@ -1,0 +1,21 @@
+@use '../../../assets/styles/tokens/spacing' as *;
+@use '../../../assets/styles/tokens/colors' as *;
+@use '../../../assets/styles/tokens/typography' as *;
+
+.header {
+  padding: $spacing-6 $spacing-8;
+  background-color: $color-bg;
+  border-bottom: 1px solid $color-border;
+}
+
+.headerTitle {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $color-text;
+}
+
+.main {
+  max-width: 1200px;
+  margin: $spacing-0 auto;
+  padding: $spacing-8;
+}

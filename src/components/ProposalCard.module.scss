@@ -1,0 +1,41 @@
+@use '../../assets/styles/tokens/colors' as *;
+@use '../../assets/styles/tokens/typography' as *;
+@use '../../assets/styles/tokens/spacing' as *;
+
+.card {
+  display: block;
+  overflow: hidden;
+  border-radius: $radius-lg;
+  background-color: $color-bg-card;
+  box-shadow: $shadow-sm;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    box-shadow: $shadow-md;
+    transform: translateY(-2px);
+  }
+}
+
+.thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.body {
+  padding: $spacing-4;
+}
+
+.title {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-tight;
+  color: $color-text;
+  margin-bottom: $spacing-2;
+}
+
+.summary {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  line-height: $line-height-base;
+}

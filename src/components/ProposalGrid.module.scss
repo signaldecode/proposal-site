@@ -1,0 +1,9 @@
+@use '../../assets/styles/tokens/spacing' as *;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: $spacing-6;
+  padding: $spacing-0;
+  list-style: none;
+}
