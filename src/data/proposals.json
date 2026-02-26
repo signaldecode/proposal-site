@@ -1,35 +1,5 @@
 [
   {
-    "slug": "SEO-keyword",
-    "title": "구글 SEO 키워드 분석 리포트",
-    "summary": "키워드 난이도 · 검색량 · 트래픽 잠재력 · 상위노출 전략",
-    "category": "seo",
-    "subCategory": "키워드 분석",
-    "pdf": "/proposals/SEO-keyword1/구글 SEO 키워드 분석 리포트.pdf",
-    "thumb": {
-      "src": "/proposals/SEO-keyword1/1.jpg",
-      "alt": "SEO 키워드 분석 제안서 썸네일"
-    },
-    "pages": [
-      { "src": "/proposals/SEO-keyword1/1.jpg", "alt": "SEO 키워드 분석 제안서 1페이지" },
-      { "src": "/proposals/SEO-keyword1/2.jpg", "alt": "SEO 키워드 분석 제안서 2페이지" },
-      { "src": "/proposals/SEO-keyword1/3.jpg", "alt": "SEO 키워드 분석 제안서 3페이지" },
-      { "src": "/proposals/SEO-keyword1/4.jpg", "alt": "SEO 키워드 분석 제안서 4페이지" },
-      { "src": "/proposals/SEO-keyword1/5.jpg", "alt": "SEO 키워드 분석 제안서 5페이지" },
-      { "src": "/proposals/SEO-keyword1/6.jpg", "alt": "SEO 키워드 분석 제안서 6페이지" },
-      { "src": "/proposals/SEO-keyword1/7.jpg", "alt": "SEO 키워드 분석 제안서 7페이지" },
-      { "src": "/proposals/SEO-keyword1/8.jpg", "alt": "SEO 키워드 분석 제안서 8페이지" },
-      { "src": "/proposals/SEO-keyword1/9.jpg", "alt": "SEO 키워드 분석 제안서 9페이지" },
-      { "src": "/proposals/SEO-keyword1/10.jpg", "alt": "SEO 키워드 분석 제안서 10페이지" },
-      { "src": "/proposals/SEO-keyword1/11.jpg", "alt": "SEO 키워드 분석 제안서 11페이지" },
-      { "src": "/proposals/SEO-keyword1/12.jpg", "alt": "SEO 키워드 분석 제안서 12페이지" },
-      { "src": "/proposals/SEO-keyword1/13.jpg", "alt": "SEO 키워드 분석 제안서 13페이지" },
-      { "src": "/proposals/SEO-keyword1/14.jpg", "alt": "SEO 키워드 분석 제안서 14페이지" },
-      { "src": "/proposals/SEO-keyword1/15.jpg", "alt": "SEO 키워드 분석 제안서 15페이지" },
-      { "src": "/proposals/SEO-keyword1/16.jpg", "alt": "SEO 키워드 분석 제안서 16페이지" }
-    ]
-  },
-  {
     "slug": "corporate-sales",
     "title": "매출 관리 시스템 통합 및 웹 기반 신규 구축 제안",
     "summary": "매출 데이터 일원화와 운영 효율을 위한 통합 관리 체계 구축",
