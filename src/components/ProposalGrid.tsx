@@ -45,7 +45,7 @@ export default function ProposalGrid({ proposals }: ProposalGridProps) {
         <div className={styles.pagination}>
           <button
             className={styles.pageButton}
-            onClick={() => setPage((prev) => prev - 1)}
+            onClick={() => { setPage((prev) => prev - 1); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
             disabled={page === 1}
           >
             ‹
@@ -54,14 +54,14 @@ export default function ProposalGrid({ proposals }: ProposalGridProps) {
             <button
               key={n}
               className={`${styles.pageButton} ${n === page ? styles.pageButtonActive : ''}`}
-              onClick={() => setPage(n)}
+              onClick={() => { setPage(n); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
             >
               {n}
             </button>
           ))}
           <button
             className={styles.pageButton}
-            onClick={() => setPage((prev) => prev + 1)}
+            onClick={() => { setPage((prev) => prev + 1); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
             disabled={page === totalPages}
           >
             ›

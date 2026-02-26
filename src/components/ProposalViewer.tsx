@@ -19,8 +19,9 @@ export default function ProposalViewer({ pages }: ProposalViewerProps) {
           className={styles.page}
           src={page.src}
           alt={page.alt}
-          width={960}
-          height={1358}
+          width={1920}
+          height={2714}
+          unoptimized // 이미지 최적화 건너뛰고 원본 파일 그대로 표시. 지워도 됨.
         />
       ))}
     </div>

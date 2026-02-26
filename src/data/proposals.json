@@ -10,26 +10,113 @@
       "alt": "SEO 키워드 분석 제안서 썸네일"
     },
     "pages": [
-      { "src": "/proposals/SEO-keyword/1.jpg", "alt": "SEO 키워드 분석 제안서 1페이지" },
-      { "src": "/proposals/SEO-keyword/2.jpg", "alt": "SEO 키워드 분석 제안서 2페이지" },
-      { "src": "/proposals/SEO-keyword/3.jpg", "alt": "SEO 키워드 분석 제안서 3페이지" },
-      { "src": "/proposals/SEO-keyword/4.jpg", "alt": "SEO 키워드 분석 제안서 4페이지" },
-      { "src": "/proposals/SEO-keyword/5.jpg", "alt": "SEO 키워드 분석 제안서 5페이지" },
-      { "src": "/proposals/SEO-keyword/6.jpg", "alt": "SEO 키워드 분석 제안서 6페이지" },
-      { "src": "/proposals/SEO-keyword/7.jpg", "alt": "SEO 키워드 분석 제안서 7페이지" },
-      { "src": "/proposals/SEO-keyword/8.jpg", "alt": "SEO 키워드 분석 제안서 8페이지" },
-      { "src": "/proposals/SEO-keyword/9.jpg", "alt": "SEO 키워드 분석 제안서 9페이지" },
-      { "src": "/proposals/SEO-keyword/10.jpg", "alt": "SEO 키워드 분석 제안서 10페이지" },
-      { "src": "/proposals/SEO-keyword/11.jpg", "alt": "SEO 키워드 분석 제안서 11페이지" },
-      { "src": "/proposals/SEO-keyword/12.jpg", "alt": "SEO 키워드 분석 제안서 12페이지" },
-      { "src": "/proposals/SEO-keyword/13.jpg", "alt": "SEO 키워드 분석 제안서 13페이지" },
-      { "src": "/proposals/SEO-keyword/14.jpg", "alt": "SEO 키워드 분석 제안서 14페이지" },
-      { "src": "/proposals/SEO-keyword/15.jpg", "alt": "SEO 키워드 분석 제안서 15페이지" },
-      { "src": "/proposals/SEO-keyword/16.jpg", "alt": "SEO 키워드 분석 제안서 16페이지" },
-      { "src": "/proposals/SEO-keyword/17.jpg", "alt": "SEO 키워드 분석 제안서 17페이지" },
-      { "src": "/proposals/SEO-keyword/18.jpg", "alt": "SEO 키워드 분석 제안서 18페이지" },
-      { "src": "/proposals/SEO-keyword/19.jpg", "alt": "SEO 키워드 분석 제안서 19페이지" },
-      { "src": "/proposals/SEO-keyword/20.jpg", "alt": "SEO 키워드 분석 제안서 20페이지" }
+      { "src": "/proposals/SEO-keyword1/1.jpg", "alt": "SEO 키워드 분석 제안서 1페이지" },
+      { "src": "/proposals/SEO-keyword1/2.jpg", "alt": "SEO 키워드 분석 제안서 2페이지" },
+      { "src": "/proposals/SEO-keyword1/3.jpg", "alt": "SEO 키워드 분석 제안서 3페이지" },
+      { "src": "/proposals/SEO-keyword1/4.jpg", "alt": "SEO 키워드 분석 제안서 4페이지" },
+      { "src": "/proposals/SEO-keyword1/5.jpg", "alt": "SEO 키워드 분석 제안서 5페이지" },
+      { "src": "/proposals/SEO-keyword1/6.jpg", "alt": "SEO 키워드 분석 제안서 6페이지" },
+      { "src": "/proposals/SEO-keyword1/7.jpg", "alt": "SEO 키워드 분석 제안서 7페이지" },
+      { "src": "/proposals/SEO-keyword1/8.jpg", "alt": "SEO 키워드 분석 제안서 8페이지" },
+      { "src": "/proposals/SEO-keyword1/9.jpg", "alt": "SEO 키워드 분석 제안서 9페이지" },
+      { "src": "/proposals/SEO-keyword1/10.jpg", "alt": "SEO 키워드 분석 제안서 10페이지" },
+      { "src": "/proposals/SEO-keyword1/11.jpg", "alt": "SEO 키워드 분석 제안서 11페이지" },
+      { "src": "/proposals/SEO-keyword1/12.jpg", "alt": "SEO 키워드 분석 제안서 12페이지" },
+      { "src": "/proposals/SEO-keyword1/13.jpg", "alt": "SEO 키워드 분석 제안서 13페이지" },
+      { "src": "/proposals/SEO-keyword1/14.jpg", "alt": "SEO 키워드 분석 제안서 14페이지" },
+      { "src": "/proposals/SEO-keyword1/15.jpg", "alt": "SEO 키워드 분석 제안서 15페이지" },
+      { "src": "/proposals/SEO-keyword1/16.jpg", "alt": "SEO 키워드 분석 제안서 16페이지" },
+      { "src": "/proposals/SEO-keyword1/17.jpg", "alt": "SEO 키워드 분석 제안서 17페이지" },
+      { "src": "/proposals/SEO-keyword1/18.jpg", "alt": "SEO 키워드 분석 제안서 18페이지" },
+      { "src": "/proposals/SEO-keyword1/19.jpg", "alt": "SEO 키워드 분석 제안서 19페이지" },
+      { "src": "/proposals/SEO-keyword1/20.jpg", "alt": "SEO 키워드 분석 제안서 20페이지" }
+    ]
+  },
+  {
+    "slug": "corporate-sales",
+    "title": "매출 관리 시스템 통합 및 웹 기반 신규 구축 제안",
+    "summary": "매출 데이터 일원화와 운영 효율을 위한 통합 관리 체계 구축",
+    "category": "corporate",
+    "subCategory": "매출",
+    "thumb": {
+      "src": "/proposals/corporate-sales/1.png",
+      "alt": "매출 관리 시스템 통합 및 웹 기반 신규 구축 제안 썸네일"
+    },
+    "pages": [
+      { "src": "/proposals/corporate-sales/1.png", "alt": "매출 관리 시스템 통합 및 웹 기반 신규 구축 제안 1페이지" },
+      { "src": "/proposals/corporate-sales/2.png", "alt": "매출 관리 시스템 통합 및 웹 기반 신규 구축 제안 2페이지" },
+      { "src": "/proposals/corporate-sales/3.png", "alt": "매출 관리 시스템 통합 및 웹 기반 신규 구축 제안 3페이지" },
+      { "src": "/proposals/corporate-sales/4.png", "alt": "매출 관리 시스템 통합 및 웹 기반 신규 구축 제안 4페이지" },
+      { "src": "/proposals/corporate-sales/5.png", "alt": "매출 관리 시스템 통합 및 웹 기반 신규 구축 제안 5페이지" },
+      { "src": "/proposals/corporate-sales/6.png", "alt": "매출 관리 시스템 통합 및 웹 기반 신규 구축 제안 6페이지" },
+      { "src": "/proposals/corporate-sales/7.png", "alt": "매출 관리 시스템 통합 및 웹 기반 신규 구축 제안 7페이지" },
+      { "src": "/proposals/corporate-sales/8.png", "alt": "매출 관리 시스템 통합 및 웹 기반 신규 구축 제안 8페이지" },
+      { "src": "/proposals/corporate-sales/9.png", "alt": "매출 관리 시스템 통합 및 웹 기반 신규 구축 제안 9페이지" }
+    ]
+  },
+    {
+    "slug": "hospital-animal",
+    "title": "동물병원 통합 웹 플랫폼 구축",
+    "summary": "예약부터 사후 관리까지, 반려동물 생애 주기를 아우르는 통합 솔루션",
+    "category": "hospital",
+    "subCategory": "동물병원",
+    "thumb": {
+      "src": "/proposals/hospital-animal/1.png",
+      "alt": "동물병원 통합 웹 플랫폼 구축 썸네일"
+    },
+    "pages": [
+      { "src": "/proposals/corporate-sales/1.png", "alt": "동물병원 통합 웹 플랫폼 구축 1페이지" },
+      { "src": "/proposals/hospital-animal/2.png", "alt": "동물병원 통합 웹 플랫폼 구축 2페이지" },
+      { "src": "/proposals/hospital-animal/3.png", "alt": "동물병원 통합 웹 플랫폼 구축 3페이지" },
+      { "src": "/proposals/hospital-animal/4.png", "alt": "동물병원 통합 웹 플랫폼 구축 4페이지" },
+      { "src": "/proposals/hospital-animal/5.png", "alt": "동물병원 통합 웹 플랫폼 구축 5페이지" },
+      { "src": "/proposals/hospital-animal/6.png", "alt": "동물병원 통합 웹 플랫폼 구축 6페이지" },
+      { "src": "/proposals/hospital-animal/7.png", "alt": "동물병원 통합 웹 플랫폼 구축 7페이지" },
+      { "src": "/proposals/hospital-animal/8.png", "alt": "동물병원 통합 웹 플랫폼 구축 8페이지" },
+      { "src": "/proposals/hospital-animal/9.png", "alt": "동물병원 통합 웹 플랫폼 구축 9페이지" }
+    ]
+  },
+  {
+    "slug": "law-platform",
+    "title": "법률 통합 웹 플랫폼 구축",
+    "summary": "법률 사각지대 없는 세상을 만드는 데이터 기반 통합 플랫폼",
+    "category": "law",
+    "subCategory": "기타",
+    "thumb": {
+      "src": "/proposals/law-platform/1.png",
+      "alt": "법률 서비스 플랫폼 구축 제안 썸네일"
+    },
+    "pages": [
+      { "src": "/proposals/law-platform/1.png", "alt": "법률 서비스 플랫폼 구축 제안 1페이지" },
+      { "src": "/proposals/law-platform/2.png", "alt": "법률 서비스 플랫폼 구축 제안 2페이지" },
+      { "src": "/proposals/law-platform/3.png", "alt": "법률 서비스 플랫폼 구축 제안 3페이지" },
+      { "src": "/proposals/law-platform/4.png", "alt": "법률 서비스 플랫폼 구축 제안 4페이지" },
+      { "src": "/proposals/law-platform/5.png", "alt": "법률 서비스 플랫폼 구축 제안 5페이지" },
+      { "src": "/proposals/law-platform/6.png", "alt": "법률 서비스 플랫폼 구축 제안 6페이지" },
+      { "src": "/proposals/law-platform/7.png", "alt": "법률 서비스 플랫폼 구축 제안 7페이지" },
+      { "src": "/proposals/law-platform/8.png", "alt": "법률 서비스 플랫폼 구축 제안 8페이지" },
+      { "src": "/proposals/law-platform/9.png", "alt": "법률 서비스 플랫폼 구축 제안 9페이지" }
+    ]
+  },
+  {
+    "slug": "corporate-foodsales",
+    "title": "(주)이음푸드 브랜드 가치 제고 및 디지털 경쟁력 강화를 위한 웹사이트 리뉴얼",
+    "summary": "디지털 경쟁력 강화를 위한 웹사이트 리뉴얼",
+    "category": "corporate",
+    "subCategory": "매출",
+    "thumb": {
+      "src": "/proposals/corporate-foodsales/1.png",
+      "alt": "식품 유통 매출 관리 시스템 구축 썸네일"
+    },
+    "pages": [
+      { "src": "/proposals/corporate-foodsales/1.png", "alt": "식품 유통 매출 관리 시스템 구축 1페이지" },
+      { "src": "/proposals/corporate-foodsales/2.png", "alt": "식품 유통 매출 관리 시스템 구축 2페이지" },
+      { "src": "/proposals/corporate-foodsales/3.png", "alt": "식품 유통 매출 관리 시스템 구축 3페이지" },
+      { "src": "/proposals/corporate-foodsales/4.png", "alt": "식품 유통 매출 관리 시스템 구축 4페이지" },
+      { "src": "/proposals/corporate-foodsales/5.png", "alt": "식품 유통 매출 관리 시스템 구축 5페이지" },
+      { "src": "/proposals/corporate-foodsales/6.png", "alt": "식품 유통 매출 관리 시스템 구축 6페이지" },
+      { "src": "/proposals/corporate-foodsales/7.png", "alt": "식품 유통 매출 관리 시스템 구축 7페이지" },
+      { "src": "/proposals/corporate-foodsales/8.png", "alt": "식품 유통 매출 관리 시스템 구축 8페이지" }
     ]
   }
 ]
