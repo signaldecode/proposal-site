@@ -10,14 +10,16 @@ interface Proposal {
   slug: string;
   title: string;
   summary: string;
+  section?: string;
   thumb: { src: string; alt: string };
 }
 
 interface ProposalGridProps {
+  sectionSlug?: string;
   proposals: Proposal[];
 }
 
-export default function ProposalGrid({ proposals }: ProposalGridProps) {
+export default function ProposalGrid({ sectionSlug, proposals }: ProposalGridProps) {
   const [page, setPage] = useState(1);
   const totalPages = Math.max(1, Math.ceil(proposals.length / PER_PAGE));
   const paginated = proposals.slice((page - 1) * PER_PAGE, page * PER_PAGE);
@@ -32,6 +34,7 @@ export default function ProposalGrid({ proposals }: ProposalGridProps) {
         {paginated.map((p) => (
           <li key={p.slug}>
             <ProposalCard
+              sectionSlug={sectionSlug ?? p.section ?? 'web'}
               slug={p.slug}
               title={p.title}
               summary={p.summary}

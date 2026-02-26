@@ -4,32 +4,35 @@ import { useParams, useSearchParams } from 'next/navigation';
 import { useMemo } from 'react';
 import CategorySidebar from '@/components/CategorySidebar';
 import ProposalGrid from '@/components/ProposalGrid';
-import { CATEGORIES } from '@/data/categories';
+import { findSection, findCategoryInSection } from '@/data/categories';
 import proposals from '@/data/proposals.json';
 import styles from '../page.module.scss';
 
-export default function CategorySlugPage() {
-  const { slug } = useParams<{ slug: string }>();
+export default function SectionCategorySlugPage() {
+  const { section, slug } = useParams<{ section: string; slug: string }>();
   const searchParams = useSearchParams();
   const sub = searchParams.get('sub');
 
-  const category = CATEGORIES.find((c) => c.slug === slug);
+  const sectionData = findSection(section);
+  const category = findCategoryInSection(section, slug);
 
   const filtered = useMemo(() => {
-    if (!slug) return proposals;
+    let result = proposals.filter(
+      (p) => p.section === section && p.category === slug,
+    );
     if (sub) {
-      return proposals.filter(
-        (p) => p.category === slug && p.subCategory === sub,
-      );
+      result = result.filter((p) => p.subCategory === sub);
     }
-    return proposals.filter((p) => p.category === slug);
-  }, [slug, sub]);
+    return result;
+  }, [section, slug, sub]);
 
   return (
     <div className={styles.layout}>
-      <CategorySidebar selectedCategory={slug} selectedSub={sub} />
+      <CategorySidebar sectionSlug={section} selectedCategory={slug} selectedSub={sub} />
       <section className={styles.content}>
         <h1 className={styles.heading}>
+          <span className={styles.sectionLabel}>{sectionData?.label ?? section}</span>
+          <span className={styles.chevron}>▸</span>
           {sub ? (
             <>
               <span className={styles.categoryLabel}>{category?.label ?? slug}</span>
@@ -37,11 +40,11 @@ export default function CategorySlugPage() {
               <span className={styles.subLabel}>{sub}</span>
             </>
           ) : (
-            category?.label ?? slug
+            <span className={styles.subLabel}>{category?.label ?? slug}</span>
           )}
         </h1>
         <p className={styles.resultCount}>총 {filtered.length}건</p>
-        <ProposalGrid proposals={filtered} />
+        <ProposalGrid sectionSlug={section} proposals={filtered} />
       </section>
     </div>
   );

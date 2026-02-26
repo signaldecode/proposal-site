@@ -4,13 +4,16 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { CATEGORIES } from '@/data/categories';
+import { SECTIONS } from '@/data/categories';
 import styles from './Navbar.module.scss';
 
 export default function Navbar() {
   const pathname = usePathname();
   const isHome = pathname === '/';
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [hoveredSection, setHoveredSection] = useState<string | null>(null);
+
+  const currentSection = pathname.split('/')[1] || null;
+  const activeSection = SECTIONS.find((s) => s.slug === hoveredSection);
 
   return (
     <div className={styles.wrapper}>
@@ -28,38 +31,66 @@ export default function Navbar() {
 
         <nav
           className={styles.nav}
-          onMouseEnter={() => setDropdownOpen(true)}
-          onMouseLeave={() => setDropdownOpen(false)}
+          onMouseLeave={() => setHoveredSection(null)}
         >
           <div className={styles.navLinks}>
-            <Link href="/category/" className={styles.navLink}>
+            <Link
+              href="/all"
+              className={`${styles.navLink} ${currentSection === 'all' ? styles.navLinkActive : ''}`}
+              onMouseEnter={() => setHoveredSection(null)}
+            >
               전체보기
             </Link>
-            {CATEGORIES.map(({ label, slug }) => (
-              <Link key={slug} href={`/category/${slug}`} className={styles.navLink}>
+            {SECTIONS.map(({ label, slug }) => (
+              <Link
+                key={slug}
+                href={`/${slug}/category`}
+                className={`${styles.navLink} ${currentSection === slug ? styles.navLinkActive : ''}`}
+                onMouseEnter={() => setHoveredSection(slug)}
+                onClick={() => setHoveredSection(null)}
+              >
                 {label}
               </Link>
             ))}
           </div>
 
-          <div className={`${styles.megaDropdown} ${dropdownOpen ? styles.megaDropdownOpen : ''}`}>
-            {CATEGORIES.map(({ label, slug, sub }) => (
-              <div key={slug} className={styles.megaColumn}>
-                <Link href={`/category/${slug}`} className={styles.megaHeader} onClick={() => setDropdownOpen(false)}>
-                  {label}
-                  <span className={styles.chevron}>›</span>
-                </Link>
-                <ul className={styles.megaList}>
-                  {sub.map((subLabel) => (
-                    <li key={subLabel}>
-                      <Link href={`/category/${slug}?sub=${encodeURIComponent(subLabel)}`} className={styles.megaItem} onClick={() => setDropdownOpen(false)}>
-                        {subLabel}
+          <div
+            className={`${styles.megaDropdown} ${
+              activeSection ? styles.megaDropdownOpen : ''
+            }`}
+          >
+            {activeSection && (
+              <div className={styles.megaInner}>
+                <div className={styles.megaSectionTitle}>{activeSection.label}</div>
+                <div className={styles.megaColumns}>
+                  {activeSection.categories.map(({ label, slug, sub }) => (
+                    <div key={slug} className={styles.megaColumn}>
+                      <Link
+                        href={`/${activeSection.slug}/category/${slug}`}
+                        className={styles.megaHeader}
+                        onClick={() => setHoveredSection(null)}
+                      >
+                        {label}
+                        <span className={styles.chevron}>›</span>
                       </Link>
-                    </li>
+                      <ul className={styles.megaList}>
+                        {sub.map((subLabel) => (
+                          <li key={subLabel}>
+                            <Link
+                              href={`/${activeSection.slug}/category/${slug}?sub=${encodeURIComponent(subLabel)}`}
+                              className={styles.megaItem}
+                              onClick={() => setHoveredSection(null)}
+                            >
+                              {subLabel}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
-            ))}
+            )}
           </div>
         </nav>
 

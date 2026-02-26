@@ -1,0 +1,28 @@
+@use '../../../../assets/styles/tokens/typography' as *;
+@use '../../../../assets/styles/tokens/spacing' as *;
+@use '../../../../assets/styles/tokens/colors' as *;
+
+.layout {
+  display: flex;
+  gap: $spacing-8;
+  padding-bottom: 25rem;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.heading {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+  color: $color-text;
+}
+
+.resultCount {
+  margin: 0 0 $spacing-4;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}

@@ -5,7 +5,18 @@
 .sidebar {
   width: 200px;
   flex-shrink: 0;
-  padding-top: $spacing-10;
+  padding-top: $spacing-6;
+}
+
+.sectionTitle {
+  padding: $spacing-2 $spacing-4;
+  margin-bottom: $spacing-2;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  color: $color-text-secondary;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.6;
 }
 
 .allButton {

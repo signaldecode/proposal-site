@@ -1,6 +1,6 @@
-@use '../../../../assets/styles/tokens/typography' as *;
-@use '../../../../assets/styles/tokens/spacing' as *;
-@use '../../../../assets/styles/tokens/colors' as *;
+@use '../../../../../assets/styles/tokens/typography' as *;
+@use '../../../../../assets/styles/tokens/spacing' as *;
+@use '../../../../../assets/styles/tokens/colors' as *;
 
 .layout {
   display: flex;
@@ -20,6 +20,12 @@
   margin-bottom: 1.5rem;
   margin-top: 1.5rem;
   font-size: 1.5rem;
+}
+
+.sectionLabel {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+  color: $color-text-secondary;
 }
 
 .categoryLabel {

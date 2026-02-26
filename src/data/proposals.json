@@ -1,6 +1,7 @@
 [
   {
     "slug": "corporate-sales",
+    "section": "web",
     "title": "매출 관리 시스템 통합 및 웹 기반 신규 구축 제안",
     "summary": "매출 데이터 일원화와 운영 효율을 위한 통합 관리 체계 구축",
     "category": "corporate",
@@ -24,6 +25,7 @@
   },
     {
     "slug": "hospital-animal",
+    "section": "web",
     "title": "동물병원 통합 웹 플랫폼 구축",
     "summary": "예약부터 사후 관리까지, 반려동물 생애 주기를 아우르는 통합 솔루션",
     "category": "hospital",
@@ -47,6 +49,7 @@
   },
   {
     "slug": "law-platform",
+    "section": "web",
     "title": "법률 통합 웹 플랫폼 구축",
     "summary": "법률 사각지대 없는 세상을 만드는 데이터 기반 통합 플랫폼",
     "category": "law",
@@ -70,6 +73,7 @@
   },
   {
     "slug": "corporate-foodsales",
+    "section": "web",
     "title": "(주)이음푸드 브랜드 가치 제고 및 디지털 경쟁력 강화를 위한 웹사이트 리뉴얼",
     "summary": "디지털 경쟁력 강화를 위한 웹사이트 리뉴얼",
     "category": "corporate",
@@ -92,6 +96,7 @@
   },
     {
     "slug": "etc-lectureplatfom",
+    "section": "web",
     "title": "동영상 강의 서비스 웹 플랫폼",
     "summary": "디지털 경쟁력 강화를 위한 웹사이트 리뉴얼",
     "category": "etc",
@@ -115,6 +120,7 @@
   },
     {
     "slug": "etc-kiosk",
+    "section": "web",
     "title": "2026년 키오스크 대응 가이드",
     "summary": "법적 기준 미이행에 대한 책임이 본격적으로 적용되며, 단순 시정 권고가 아닌 최대 3,000만 원의 과태료가 부과될 수 있습니다.",
     "category": "etc",

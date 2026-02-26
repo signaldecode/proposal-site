@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import '../../assets/styles/main.scss';
 
 export const metadata: Metadata = {
-  title: 'Signal-decode-proposal',
+  title: '시그널디코드 제안서',
   description: '시그널디코드 제안서',
 };
 
