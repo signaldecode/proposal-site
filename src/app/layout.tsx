@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import '../../assets/styles/main.scss';
 
 export const metadata: Metadata = {
-  title: 'Proposal Viewer',
-  description: '제안서 포트폴리오 뷰어',
+  title: 'Signal-decode-proposal',
+  description: '시그널디코드 제안서',
 };
 
 export default function RootLayout({

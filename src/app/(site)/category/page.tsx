@@ -11,6 +11,7 @@ export default function CategoryPage() {
       <CategorySidebar selectedCategory={null} selectedSub={null} />
       <section className={styles.content}>
         <h1 className={styles.heading}>전체 제안서</h1>
+        <p className={styles.resultCount}>총 {proposals.length}건</p>
         <ProposalGrid proposals={proposals} />
       </section>
     </div>

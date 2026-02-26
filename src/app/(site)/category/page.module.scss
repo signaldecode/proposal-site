@@ -17,7 +17,7 @@
   display: flex;
   align-items: baseline;
   gap: $spacing-2;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   margin-top: 1.5rem;
   font-size: 1.5rem;
 }
@@ -37,4 +37,10 @@
   font-size: $font-size-2xl;
   font-weight: $font-weight-bold;
   color: $color-text;
+}
+
+.resultCount {
+  margin: 0 0 $spacing-4;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
 }

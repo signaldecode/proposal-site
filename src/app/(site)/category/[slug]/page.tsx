@@ -40,6 +40,7 @@ export default function CategorySlugPage() {
             category?.label ?? slug
           )}
         </h1>
+        <p className={styles.resultCount}>총 {filtered.length}건</p>
         <ProposalGrid proposals={filtered} />
       </section>
     </div>

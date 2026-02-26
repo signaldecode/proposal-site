@@ -135,3 +135,11 @@
     background-color: rgba($color-primary, 0.08);
   }
 }
+
+.count {
+  margin-left: $spacing-1;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-regular;
+  color: $color-text-secondary;
+  opacity: 0.7;
+}

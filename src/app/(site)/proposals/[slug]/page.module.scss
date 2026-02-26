@@ -3,8 +3,12 @@
 @use '../../../../../assets/styles/tokens/colors' as *;
 
 .wrapper {
-  max-width: 1300px;
-  margin: 0 auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  max-width: 1700px;
+  padding: 0 $spacing-8;
 }
 
 .notFound {
@@ -113,6 +117,31 @@
 
 .copyButtonCopied {
   color: $color-primary;
+}
+
+.downloadButton {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  color: $color-gray-400;
+  background: none;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  cursor: pointer;
+  transition: color 0.15s ease, background-color 0.15s ease;
+
+  &:hover {
+    color: $color-text;
+    background-color: $color-gray-100;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
 }
 
 .summary {

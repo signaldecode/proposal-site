@@ -1,9 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import { CATEGORIES } from '@/data/categories';
+import proposals from '@/data/proposals.json';
 import styles from './CategorySidebar.module.scss';
 
 interface CategorySidebarProps {
@@ -15,10 +15,22 @@ export default function CategorySidebar({
   selectedCategory,
   selectedSub,
 }: CategorySidebarProps) {
-  const router = useRouter();
   const [openSlugs, setOpenSlugs] = useState<string[]>(
     selectedCategory ? [selectedCategory] : [],
   );
+
+  const { categoryCount, subCount } = useMemo(() => {
+    const catMap: Record<string, number> = {};
+    const subMap: Record<string, number> = {};
+
+    for (const p of proposals) {
+      catMap[p.category] = (catMap[p.category] || 0) + 1;
+      const key = `${p.category}::${p.subCategory}`;
+      subMap[key] = (subMap[key] || 0) + 1;
+    }
+
+    return { categoryCount: catMap, subCount: subMap };
+  }, []);
 
   function toggleAccordion(slug: string) {
     setOpenSlugs((prev) =>
@@ -35,6 +47,7 @@ export default function CategorySidebar({
         }`}
       >
         전체보기
+        <span className={styles.count}>({proposals.length})</span>
       </Link>
 
       <ul className={styles.list}>
@@ -42,19 +55,18 @@ export default function CategorySidebar({
           const isOpen = openSlugs.includes(slug);
           const isCategoryActive =
             selectedCategory === slug && !selectedSub;
+          const catTotal = categoryCount[slug] || 0;
 
           return (
             <li key={slug} className={styles.item}>
               <button
-                className={`${styles.categoryRow} ${
-                  isCategoryActive ? styles.active : ''
-                }`}
-                onClick={() => {
-                  toggleAccordion(slug);
-                  router.push(`/category/${slug}`);
-                }}
+                className={styles.categoryRow}
+                onClick={() => toggleAccordion(slug)}
               >
-                <span className={styles.category}>{label}</span>
+                <span className={styles.category}>
+                  {label}
+                  <span className={styles.count}>({catTotal})</span>
+                </span>
                 <span
                   className={`${styles.chevronBtn} ${
                     isOpen ? styles.chevronOpen : ''
@@ -69,20 +81,34 @@ export default function CategorySidebar({
                   isOpen ? styles.subListOpen : ''
                 }`}
               >
-                {sub.map((subLabel) => (
-                  <li key={subLabel}>
-                    <Link
-                      href={`/category/${slug}?sub=${encodeURIComponent(subLabel)}`}
-                      className={`${styles.subItem} ${
-                        selectedCategory === slug && selectedSub === subLabel
-                          ? styles.active
-                          : ''
-                      }`}
-                    >
-                      {subLabel}
-                    </Link>
-                  </li>
-                ))}
+                <li>
+                  <Link
+                    href={`/category/${slug}`}
+                    className={`${styles.subItem} ${
+                      isCategoryActive ? styles.active : ''
+                    }`}
+                  >
+                    전체보기
+                  </Link>
+                </li>
+                {sub.map((subLabel) => {
+                  const subTotal = subCount[`${slug}::${subLabel}`] || 0;
+                  return (
+                    <li key={subLabel}>
+                      <Link
+                        href={`/category/${slug}?sub=${encodeURIComponent(subLabel)}`}
+                        className={`${styles.subItem} ${
+                          selectedCategory === slug && selectedSub === subLabel
+                            ? styles.active
+                            : ''
+                        }`}
+                      >
+                        {subLabel}
+                        <span className={styles.count}>({subTotal})</span>
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </li>
           );

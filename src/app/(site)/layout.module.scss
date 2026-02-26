@@ -1,9 +1,9 @@
 @use '../../../assets/styles/tokens/spacing' as *;
 
 .main {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: $spacing-0 auto;
-  padding: $spacing-8;
+  padding: $spacing-4 $spacing-5;
   padding-top: 6rem; // navbar height(4rem) + spacing
 }
 

@@ -5,6 +5,7 @@
     "summary": "키워드 난이도 · 검색량 · 트래픽 잠재력 · 상위노출 전략",
     "category": "seo",
     "subCategory": "키워드 분석",
+    "pdf": "/proposals/SEO-keyword1/구글 SEO 키워드 분석 리포트.pdf",
     "thumb": {
       "src": "/proposals/SEO-keyword/1.jpg",
       "alt": "SEO 키워드 분석 제안서 썸네일"
@@ -25,11 +26,7 @@
       { "src": "/proposals/SEO-keyword1/13.jpg", "alt": "SEO 키워드 분석 제안서 13페이지" },
       { "src": "/proposals/SEO-keyword1/14.jpg", "alt": "SEO 키워드 분석 제안서 14페이지" },
       { "src": "/proposals/SEO-keyword1/15.jpg", "alt": "SEO 키워드 분석 제안서 15페이지" },
-      { "src": "/proposals/SEO-keyword1/16.jpg", "alt": "SEO 키워드 분석 제안서 16페이지" },
-      { "src": "/proposals/SEO-keyword1/17.jpg", "alt": "SEO 키워드 분석 제안서 17페이지" },
-      { "src": "/proposals/SEO-keyword1/18.jpg", "alt": "SEO 키워드 분석 제안서 18페이지" },
-      { "src": "/proposals/SEO-keyword1/19.jpg", "alt": "SEO 키워드 분석 제안서 19페이지" },
-      { "src": "/proposals/SEO-keyword1/20.jpg", "alt": "SEO 키워드 분석 제안서 20페이지" }
+      { "src": "/proposals/SEO-keyword1/16.jpg", "alt": "SEO 키워드 분석 제안서 16페이지" }
     ]
   },
   {
@@ -38,6 +35,7 @@
     "summary": "매출 데이터 일원화와 운영 효율을 위한 통합 관리 체계 구축",
     "category": "corporate",
     "subCategory": "매출",
+    "pdf": "/proposals/corporate-sales/매출관리시스템.pdf",
     "thumb": {
       "src": "/proposals/corporate-sales/1.png",
       "alt": "매출 관리 시스템 통합 및 웹 기반 신규 구축 제안 썸네일"
@@ -60,6 +58,7 @@
     "summary": "예약부터 사후 관리까지, 반려동물 생애 주기를 아우르는 통합 솔루션",
     "category": "hospital",
     "subCategory": "동물병원",
+    "pdf": "/proposals/hospital-animal/동물병원 통합 웹 플랫폼 구축.pdf",
     "thumb": {
       "src": "/proposals/hospital-animal/1.png",
       "alt": "동물병원 통합 웹 플랫폼 구축 썸네일"
@@ -82,6 +81,7 @@
     "summary": "법률 사각지대 없는 세상을 만드는 데이터 기반 통합 플랫폼",
     "category": "law",
     "subCategory": "기타",
+    "pdf": "/proposals/law-platform/법률 통합 웹 플랫폼 구축.pdf",
     "thumb": {
       "src": "/proposals/law-platform/1.png",
       "alt": "법률 서비스 플랫폼 구축 제안 썸네일"
@@ -104,6 +104,7 @@
     "summary": "디지털 경쟁력 강화를 위한 웹사이트 리뉴얼",
     "category": "corporate",
     "subCategory": "매출",
+    "pdf": "/proposals/corporate-foodsales/(주)이음푸드 브랜드 가치 제고 및 디지털 경쟁력 강화를 위한 웹사이트 리뉴얼.pdf",
     "thumb": {
       "src": "/proposals/corporate-foodsales/1.png",
       "alt": "식품 유통 매출 관리 시스템 구축 썸네일"
@@ -117,6 +118,52 @@
       { "src": "/proposals/corporate-foodsales/6.png", "alt": "식품 유통 매출 관리 시스템 구축 6페이지" },
       { "src": "/proposals/corporate-foodsales/7.png", "alt": "식품 유통 매출 관리 시스템 구축 7페이지" },
       { "src": "/proposals/corporate-foodsales/8.png", "alt": "식품 유통 매출 관리 시스템 구축 8페이지" }
+    ]
+  },
+    {
+    "slug": "etc-lectureplatfom",
+    "title": "동영상 강의 서비스 웹 플랫폼",
+    "summary": "디지털 경쟁력 강화를 위한 웹사이트 리뉴얼",
+    "category": "etc",
+    "subCategory": "교육",
+    "pdf": "/proposals/etc-lectureplatfom/동영상 강의 서비스 웹 플랫폼.pdf",
+    "thumb": {
+      "src": "/proposals/etc-lectureplatfom/1.png",
+      "alt": "동영상 강의 서비스 웹 플랫폼 썸네일"
+    },
+    "pages": [
+      { "src": "/proposals/etc-lectureplatfom/1.png", "alt": "동영상 강의 서비스 웹 플랫폼 1페이지" },
+      { "src": "/proposals/etc-lectureplatfom/2.png", "alt": "동영상 강의 서비스 웹 플랫폼 2페이지" },
+      { "src": "/proposals/etc-lectureplatfom/3.png", "alt": "동영상 강의 서비스 웹 플랫폼 3페이지" },
+      { "src": "/proposals/etc-lectureplatfom/4.png", "alt": "동영상 강의 서비스 웹 플랫폼 4페이지" },
+      { "src": "/proposals/etc-lectureplatfom/5.png", "alt": "동영상 강의 서비스 웹 플랫폼 5페이지" },
+      { "src": "/proposals/etc-lectureplatfom/6.png", "alt": "동영상 강의 서비스 웹 플랫폼 6페이지" },
+      { "src": "/proposals/etc-lectureplatfom/7.png", "alt": "동영상 강의 서비스 웹 플랫폼 7페이지" },
+      { "src": "/proposals/etc-lectureplatfom/8.png", "alt": "동영상 강의 서비스 웹 플랫폼 8페이지" },
+      { "src": "/proposals/etc-lectureplatfom/9.png", "alt": "동영상 강의 서비스 웹 플랫폼 9페이지" }
+    ]
+  },
+    {
+    "slug": "etc-kiosk",
+    "title": "2026년 키오스크 대응 가이드",
+    "summary": "법적 기준 미이행에 대한 책임이 본격적으로 적용되며, 단순 시정 권고가 아닌 최대 3,000만 원의 과태료가 부과될 수 있습니다.",
+    "category": "etc",
+    "subCategory": "기타",
+    "pdf": "/proposals/etc-kiosk/2026년 키오스크 대응 가이드.pdf",
+    "thumb": {
+      "src": "/proposals/etc-kiosk/1.png",
+      "alt": "2026년 키오스크 대응 가이드 썸네일"
+    },
+    "pages": [
+      { "src": "/proposals/etc-kiosk/1.png", "alt": "2026년 키오스크 대응 가이드 1페이지" },
+      { "src": "/proposals/etc-kiosk/2.png", "alt": "2026년 키오스크 대응 가이드 2페이지" },
+      { "src": "/proposals/etc-kiosk/3.png", "alt": "2026년 키오스크 대응 가이드 3페이지" },
+      { "src": "/proposals/etc-kiosk/4.png", "alt": "2026년 키오스크 대응 가이드 4페이지" },
+      { "src": "/proposals/etc-kiosk/5.png", "alt": "2026년 키오스크 대응 가이드 5페이지" },
+      { "src": "/proposals/etc-kiosk/6.png", "alt": "2026년 키오스크 대응 가이드 6페이지" },
+      { "src": "/proposals/etc-kiosk/7.png", "alt": "2026년 키오스크 대응 가이드 7페이지" },
+      { "src": "/proposals/etc-kiosk/8.png", "alt": "2026년 키오스크 대응 가이드 8페이지" },
+      { "src": "/proposals/etc-kiosk/9.png", "alt": "2026년 키오스크 대응 가이드 9페이지" }
     ]
   }
 ]
