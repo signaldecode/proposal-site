@@ -8,10 +8,10 @@ export default function SiteLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <div className={styles.wrapper}>
       <Navbar />
       <main className={styles.main}>{children}</main>
       <Footer />
-    </>
+    </div>
   );
 }
