@@ -24,6 +24,10 @@
 
 .body {
   padding: $spacing-4;
+
+  @media (max-width: 768px) {
+    padding: $spacing-3;
+  }
 }
 
 .title {
@@ -32,10 +36,19 @@
   line-height: $line-height-tight;
   color: $color-text;
   margin-bottom: $spacing-2;
+
+  @media (max-width: 768px) {
+    font-size: $font-size-sm;
+    margin-bottom: $spacing-1;
+  }
 }
 
 .summary {
   font-size: $font-size-sm;
   color: $color-text-secondary;
   line-height: $line-height-base;
+
+  @media (max-width: 768px) {
+    font-size: $font-size-xs;
+  }
 }

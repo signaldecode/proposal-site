@@ -6,6 +6,12 @@
   display: flex;
   gap: $spacing-8;
   padding-bottom: 25rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: $spacing-4;
+    padding-bottom: 8rem;
+  }
 }
 
 .content {
@@ -19,6 +25,12 @@
   font-size: $font-size-2xl;
   font-weight: $font-weight-bold;
   color: $color-text;
+
+  @media (max-width: 768px) {
+    font-size: $font-size-xl;
+    margin-top: $spacing-2;
+    margin-bottom: $spacing-3;
+  }
 }
 
 .resultCount {

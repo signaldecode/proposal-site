@@ -6,6 +6,12 @@
   display: flex;
   gap: $spacing-8;
   padding-bottom: 25rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: $spacing-4;
+    padding-bottom: 8rem;
+  }
 }
 
 .content {
@@ -20,12 +26,22 @@
   margin-bottom: 1.5rem;
   margin-top: 1.5rem;
   font-size: 1.5rem;
+
+  @media (max-width: 768px) {
+    margin-top: $spacing-2;
+    margin-bottom: $spacing-3;
+    font-size: 1.2rem;
+  }
 }
 
 .sectionLabel {
   font-size: $font-size-lg;
   font-weight: $font-weight-medium;
   color: $color-text-secondary;
+
+  @media (max-width: 768px) {
+    font-size: $font-size-base;
+  }
 }
 
 .categoryLabel {
@@ -43,6 +59,10 @@
   font-size: $font-size-2xl;
   font-weight: $font-weight-bold;
   color: $color-text;
+
+  @media (max-width: 768px) {
+    font-size: $font-size-xl;
+  }
 }
 
 .resultCount {
