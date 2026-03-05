@@ -41,6 +41,19 @@ export default function ProposalDetailClient({ section, proposal }: ProposalDeta
     });
   }
 
+  async function handleDownload(e: React.MouseEvent) {
+    e.preventDefault();
+    if (!proposal.pdf) return;
+    const res = await fetch(proposal.pdf);
+    const blob = await res.blob();
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${proposal.title}.pdf`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
   return (
     <>
       <div className={styles.wrapper}>
@@ -90,7 +103,7 @@ export default function ProposalDetailClient({ section, proposal }: ProposalDeta
             {proposal.pdf && (
               <a
                 href={proposal.pdf}
-                download
+                onClick={handleDownload}
                 className={styles.downloadButton}
                 title="PDF 다운로드"
               >
@@ -128,7 +141,7 @@ export default function ProposalDetailClient({ section, proposal }: ProposalDeta
               {proposal.pdf && (
                 <a
                   href={proposal.pdf}
-                  download
+                  onClick={handleDownload}
                   className={styles.downloadButton}
                   title="PDF 다운로드"
                 >
