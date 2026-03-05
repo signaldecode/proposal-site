@@ -3,19 +3,21 @@
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import { findSection } from '@/data/categories';
-import proposals from '@/data/proposals.json';
+import type { Proposal } from '@/lib/types';
 import styles from './CategorySidebar.module.scss';
 
 interface CategorySidebarProps {
   sectionSlug: string;
   selectedCategory: string | null;
   selectedSub: string | null;
+  proposals: Proposal[];
 }
 
 export default function CategorySidebar({
   sectionSlug,
   selectedCategory,
   selectedSub,
+  proposals,
 }: CategorySidebarProps) {
   const section = findSection(sectionSlug);
   const sectionCategories = section?.categories ?? [];

@@ -1,43 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-// import { SECTIONS } from '@/data/categories';
-import proposals from '@/data/proposals.json';
+import { getAllProposals } from '@/lib/proposals';
 import ScrollReveal from '@/components/ScrollReveal';
 import styles from './page.module.scss';
-
-// const SERVICE_META: Record<string, { icon: React.ReactNode; description: string }> = {
-//   web: {
-//     icon: (
-//       <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-//         <polyline points="16 18 22 12 16 6" />
-//         <polyline points="8 6 2 12 8 18" />
-//       </svg>
-//     ),
-//     description:
-//       '비즈니스 목표에 최적화된 웹 플랫폼을 구축합니다. 반응형 디자인부터 복잡한 시스템 통합까지, 기술적 한계 없이 구현합니다.',
-//   },
-//   marketing: {
-//     icon: (
-//       <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-//         <line x1="18" y1="20" x2="18" y2="10" />
-//         <line x1="12" y1="20" x2="12" y2="4" />
-//         <line x1="6" y1="20" x2="6" y2="14" />
-//       </svg>
-//     ),
-//     description:
-//       '데이터 기반 마케팅 전략으로 실질적인 매출 성장을 이끕니다. 유입부터 전환까지 고객 여정 전체를 설계합니다.',
-//   },
-//   seo: {
-//     icon: (
-//       <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-//         <circle cx="11" cy="11" r="8" />
-//         <line x1="21" y1="21" x2="16.65" y2="16.65" />
-//       </svg>
-//     ),
-//     description:
-//       '검색엔진 최적화를 통해 지속가능한 유기적 트래픽을 확보합니다. 키워드 분석부터 기술 SEO까지 종합적으로 관리합니다.',
-//   },
-// };
 
 const SECTION_LABELS: Record<string, string> = {
   web: '웹/개발',
@@ -45,9 +10,10 @@ const SECTION_LABELS: Record<string, string> = {
   seo: 'SEO',
 };
 
-const featuredProposals = proposals.slice(0, 3);
+export default async function HomePage() {
+  const proposals = await getAllProposals();
+  const featuredProposals = proposals.slice(0, 3);
 
-export default function HomePage() {
   return (
     <>
       {/* ═══ Hero ═══ */}

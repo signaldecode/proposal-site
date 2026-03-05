@@ -2,14 +2,15 @@
 
 import Link from 'next/link';
 import { SECTIONS } from '@/data/categories';
-import proposals from '@/data/proposals.json';
+import type { Proposal } from '@/lib/types';
 import styles from './AllSidebar.module.scss';
 
 interface AllSidebarProps {
   selectedSection: string | null;
+  proposals: Proposal[];
 }
 
-export default function AllSidebar({ selectedSection }: AllSidebarProps) {
+export default function AllSidebar({ selectedSection, proposals }: AllSidebarProps) {
   const totalCount = proposals.length;
 
   return (
