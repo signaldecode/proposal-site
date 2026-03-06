@@ -9,7 +9,7 @@ import styles from './Navbar.module.scss';
 
 export default function Navbar() {
   const pathname = usePathname();
-  const isHome = pathname === '/';
+  const isHome = false;
   const [hoveredSection, setHoveredSection] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const currentSection = pathname.split('/')[1] || null;
@@ -35,7 +35,7 @@ export default function Navbar() {
   return (
     <div className={styles.wrapper}>
       <header className={`${styles.navbar} ${isHome ? styles.dark : styles.light}`}>
-        <Link href="/" className={styles.logo}>
+        <Link href="/all" className={styles.logo}>
           <Image
             className={styles.logoImage}
             src={isHome ? '/proposals/logo1.png' : '/proposals/logo.png'}

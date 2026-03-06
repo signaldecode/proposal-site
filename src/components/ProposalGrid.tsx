@@ -4,7 +4,7 @@ import { useState } from 'react';
 import ProposalCard from './ProposalCard';
 import styles from './ProposalGrid.module.scss';
 
-const PER_PAGE = 4;
+const PER_PAGE = 6;
 
 interface Proposal {
   slug: string;
