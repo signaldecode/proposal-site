@@ -12,7 +12,7 @@ export default function Navbar() {
   const isHome = false;
   const [hoveredSection, setHoveredSection] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const currentSection = pathname.split('/')[1] || null;
+  const currentSection = pathname === '/' ? 'home' : pathname.split('/')[1] || null;
   const activeSection = SECTIONS.find((s) => s.slug === hoveredSection);
 
   // 페이지 이동 시 모바일 메뉴 닫기
@@ -35,7 +35,7 @@ export default function Navbar() {
   return (
     <div className={styles.wrapper}>
       <header className={`${styles.navbar} ${isHome ? styles.dark : styles.light}`}>
-        <Link href="/all" className={styles.logo}>
+        <Link href="/" className={styles.logo}>
           <Image
             className={styles.logoImage}
             src={isHome ? '/proposals/logo1.png' : '/proposals/logo.png'}
@@ -53,8 +53,8 @@ export default function Navbar() {
         >
           <div className={styles.navLinks}>
             <Link
-              href="/all"
-              className={`${styles.navLink} ${currentSection === 'all' ? styles.navLinkActive : ''}`}
+              href="/"
+              className={`${styles.navLink} ${currentSection === 'home' ? styles.navLinkActive : ''}`}
               onMouseEnter={() => setHoveredSection(null)}
             >
               전체보기
@@ -138,8 +138,8 @@ export default function Navbar() {
       <div className={`${styles.mobileOverlay} ${mobileOpen ? styles.mobileOverlayOpen : ''} ${isHome ? styles.dark : styles.light}`}>
         <nav className={styles.mobileNav}>
           <Link
-            href="/all"
-            className={`${styles.mobileNavLink} ${currentSection === 'all' ? styles.mobileNavLinkActive : ''}`}
+            href="/"
+            className={`${styles.mobileNavLink} ${currentSection === 'home' ? styles.mobileNavLinkActive : ''}`}
           >
             전체보기
           </Link>

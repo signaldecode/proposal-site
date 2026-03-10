@@ -16,7 +16,7 @@ export default function AllSidebar({ selectedSection, proposals }: AllSidebarPro
   return (
     <aside className={styles.sidebar}>
       <Link
-        href="/all"
+        href="/"
         className={`${styles.item} ${!selectedSection ? styles.active : ''}`}
       >
         전체보기

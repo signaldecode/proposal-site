@@ -1,5 +1,7 @@
-import { redirect } from 'next/navigation';
+import { getAllProposals } from '@/lib/proposals';
+import AllPageClient from './AllPageClient';
 
-export default function HomePage() {
-  redirect('/all');
+export default async function AllPage() {
+  const proposals = await getAllProposals();
+  return <AllPageClient proposals={proposals} />;
 }
