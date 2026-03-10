@@ -292,6 +292,42 @@
   padding: 3rem 0;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.375rem;
+  margin-top: 2rem;
+}
+
+.pageButton {
+  min-width: 2rem;
+  height: 2rem;
+  padding: 0 0.5rem;
+  background: none;
+  border: 1px solid #1e1e2e;
+  border-radius: 6px;
+  color: #8b8b9e;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover:not(:disabled) {
+    border-color: #6c63ff;
+    color: #fff;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+}
+
+.pageButtonActive {
+  background: #6c63ff;
+  border-color: #6c63ff;
+  color: #fff;
+}
+
 /* Upload form */
 .formGrid {
   display: grid;

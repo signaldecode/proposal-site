@@ -23,6 +23,9 @@ export default function AdminDashboardPage() {
   const [search, setSearch] = useState('');
   const [sectionFilter, setSectionFilter] = useState('');
 
+  const [page, setPage] = useState(1);
+  const PER_PAGE = 10;
+
   const filtered = useMemo(() => {
     return proposals.filter((p) => {
       if (sectionFilter && p.section !== sectionFilter) return false;
@@ -33,6 +36,19 @@ export default function AdminDashboardPage() {
       return true;
     });
   }, [proposals, search, sectionFilter]);
+
+  const totalPages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
+  const paged = filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+
+  // 필터/검색 변경 시 1페이지로 리셋
+  useEffect(() => {
+    setPage(1);
+  }, [search, sectionFilter]);
+
+  // 페이지 변경 시 맨 위로 스크롤
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [page]);
 
   useEffect(() => {
     fetch('/api/admin/proposals')
@@ -108,6 +124,7 @@ export default function AdminDashboardPage() {
       ) : proposals.length === 0 ? (
         <p className={styles.emptyState}>등록된 제안서가 없습니다.</p>
       ) : (
+        <>
         <table className={styles.table}>
           <thead>
             <tr>
@@ -120,14 +137,14 @@ export default function AdminDashboardPage() {
             </tr>
           </thead>
           <tbody>
-            {filtered.length === 0 ? (
+            {paged.length === 0 ? (
               <tr>
                 <td colSpan={6} className={styles.emptyState}>
                   검색 결과가 없습니다.
                 </td>
               </tr>
             ) : (
-              filtered.map((p) => (
+              paged.map((p) => (
                 <tr key={p.slug}>
                   <td>{p.slug}</td>
                   <td>{p.title}</td>
@@ -151,6 +168,35 @@ export default function AdminDashboardPage() {
             )}
           </tbody>
         </table>
+
+        {totalPages > 1 && (
+          <div className={styles.pagination}>
+            <button
+              className={styles.pageButton}
+              onClick={() => setPage((p) => p - 1)}
+              disabled={page === 1}
+            >
+              ‹
+            </button>
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
+              <button
+                key={n}
+                className={`${styles.pageButton} ${page === n ? styles.pageButtonActive : ''}`}
+                onClick={() => setPage(n)}
+              >
+                {n}
+              </button>
+            ))}
+            <button
+              className={styles.pageButton}
+              onClick={() => setPage((p) => p + 1)}
+              disabled={page === totalPages}
+            >
+              ›
+            </button>
+          </div>
+        )}
+        </>
       )}
     </>
   );
