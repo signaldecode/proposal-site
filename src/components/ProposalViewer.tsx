@@ -10,6 +10,12 @@ interface ProposalViewerProps {
   pages: PageImage[];
 }
 
+function optimizeSupabaseImage(src: string): string {
+  if (!src.includes('supabase.co')) return src;
+  const optimized = src.replace('/object/public/', '/render/image/public/');
+  return `${optimized}?width=1920&quality=80&format=origin`;
+}
+
 export default function ProposalViewer({ pages }: ProposalViewerProps) {
   return (
     <div className={styles.viewer}>
@@ -17,11 +23,10 @@ export default function ProposalViewer({ pages }: ProposalViewerProps) {
         <Image
           key={idx}
           className={styles.page}
-          src={page.src}
+          src={optimizeSupabaseImage(page.src)}
           alt={page.alt}
           width={1920}
           height={2714}
-          quality={85}
           priority={idx === 0}
           loading={idx === 0 ? 'eager' : 'lazy'}
         />
