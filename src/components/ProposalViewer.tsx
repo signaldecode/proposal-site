@@ -21,10 +21,7 @@ export default function ProposalViewer({ pages }: ProposalViewerProps) {
           alt={page.alt}
           width={1920}
           height={2714}
-          quality={75}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
-          priority={idx === 0}
-          placeholder="empty"
+          unoptimized // 이미지 최적화 건너뛰고 원본 파일 그대로 표시. 지워도 됨.
         />
       ))}
     </div>

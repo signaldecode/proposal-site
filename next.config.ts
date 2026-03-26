@@ -8,8 +8,6 @@ const nextConfig: NextConfig = {
         hostname: '*.supabase.co',
       },
     ],
-    formats: ['image/avif', 'image/webp'],
-    minimumCacheTTL: 60 * 60 * 24 * 30, // 30일 캐시
   },
   experimental: {
     serverActions: {
@@ -17,26 +15,6 @@ const nextConfig: NextConfig = {
     },
   },
   serverExternalPackages: ['pdfjs-dist'],
-  headers: async () => [
-    {
-      source: '/proposals/:path*',
-      headers: [
-        {
-          key: 'Cache-Control',
-          value: 'public, max-age=31536000, immutable',
-        },
-      ],
-    },
-    {
-      source: '/_next/image/:path*',
-      headers: [
-        {
-          key: 'Cache-Control',
-          value: 'public, max-age=31536000, immutable',
-        },
-      ],
-    },
-  ],
 };
 
 export default nextConfig;
