@@ -27,6 +27,7 @@ export default function ProposalViewer({ pages }: ProposalViewerProps) {
           alt={page.alt}
           width={1920}
           height={2714}
+          unoptimized  // Vercel 프록시 건너뛰고 Supabase 직접 사용
           priority={idx === 0}
           loading={idx === 0 ? 'eager' : 'lazy'}
         />
